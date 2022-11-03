@@ -1,0 +1,17 @@
+{
+  "name": "Next devcontainer",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/app",
+  "extensions": [
+    "xabikos.javascriptsnippets",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "visualstudioexptteam.vscodeintellicode",
+    "foxundermoon.next-js",
+    "PulkitGangwar.nextjs-snippets"
+  ]
+  // "shutdownAction": "none"
+}
