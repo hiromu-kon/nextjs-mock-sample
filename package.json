@@ -9,16 +9,35 @@
     "lint": "next lint --dir src",
     "lint:fix": "yarn lint --fix",
     "hygen": "hygen",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn lint",
+      "yarn lint:fix"
+    ]
   },
   "dependencies": {
+    "axios": "^1.1.3",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "swr": "^1.3.0",
     "zod": "^3.19.1"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack5": "^6.5.13",
+    "@storybook/manager-webpack5": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
     "@types/node": "18.7.8",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
@@ -29,7 +48,9 @@
     "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-storybook": "^0.6.6",
+    "husky": "^8.0.0",
     "hygen": "^6.2.11",
+    "lint-staged": "^13.1.0",
     "msw": "^0.47.4",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
